@@ -10,6 +10,14 @@ const items = [
     label: <Link to="/users">User</Link>,
     key: "users",
   },
+  {
+    label: <Link to="/login">Login</Link>,
+    key: "login",
+  },
+  {
+    label: <Link to="/register">Register</Link>,
+    key: "register",
+  },
 ];
 
 const Navbar = () => {

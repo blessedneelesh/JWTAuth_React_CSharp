@@ -2,6 +2,7 @@ import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
 import { AccessDenied, Login, Register, User, Profile } from "../containers";
 import { ProtectedRoute } from "./ProtectedRoute";
 import { Navbar } from "../components";
+import { useAuth } from "../provider/AuthProvider";
 
 const Routes = () => {
   // Define public routes accessible to all users
@@ -60,7 +61,7 @@ const Routes = () => {
   // Combine and conditionally include routes based on authentication status
   const router = createBrowserRouter([
     ...routesForPublic,
-    //...(!token ? routesForNotAuthenticatedOnly : []),
+    // ...(!token ? routesForNotAuthenticatedOnly : []),
     ...routesForAuthenticatedOnly,
   ]);
 

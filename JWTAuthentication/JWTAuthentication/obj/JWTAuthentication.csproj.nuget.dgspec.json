@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\React\\jwtAuthentication\\JWTAuthentication\\JWTAuthentication\\JWTAuthentication.csproj": {}
+    "D:\\fullStackProjects\\jwtAuth\\JWTAuthentication\\JWTAuthentication\\JWTAuthentication.csproj": {}
   },
   "projects": {
-    "D:\\React\\jwtAuthentication\\JWTAuthentication\\JWTAuthentication\\JWTAuthentication.csproj": {
+    "D:\\fullStackProjects\\jwtAuth\\JWTAuthentication\\JWTAuthentication\\JWTAuthentication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\React\\jwtAuthentication\\JWTAuthentication\\JWTAuthentication\\JWTAuthentication.csproj",
+        "projectUniqueName": "D:\\fullStackProjects\\jwtAuth\\JWTAuthentication\\JWTAuthentication\\JWTAuthentication.csproj",
         "projectName": "JWTAuthentication",
-        "projectPath": "D:\\React\\jwtAuthentication\\JWTAuthentication\\JWTAuthentication\\JWTAuthentication.csproj",
+        "projectPath": "D:\\fullStackProjects\\jwtAuth\\JWTAuthentication\\JWTAuthentication\\JWTAuthentication.csproj",
         "packagesPath": "C:\\Users\\neele\\.nuget\\packages\\",
-        "outputPath": "D:\\React\\jwtAuthentication\\JWTAuthentication\\JWTAuthentication\\obj\\",
+        "outputPath": "D:\\fullStackProjects\\jwtAuth\\JWTAuthentication\\JWTAuthentication\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\neele\\AppData\\Roaming\\NuGet\\NuGet.Config",

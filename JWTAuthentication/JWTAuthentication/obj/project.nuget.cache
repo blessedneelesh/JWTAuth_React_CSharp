@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "D/dtnAqxacWfXDrlEySscf503xANDs12jtAecLHg57cOegnLypnqLXtnXTT72DTRVGanPpw6pc1FpXquY1lPvA==",
+  "dgSpecHash": "XPE1HJsnhKNtDmRN85lZsAcs9ZL2826nNoyLlf+lLFync5YS+inb1JN2/KVVo4hbL7/UA/wQW3IJ5vjoqS0B9Q==",
   "success": true,
-  "projectFilePath": "D:\\React\\jwtAuthentication\\JWTAuthentication\\JWTAuthentication\\JWTAuthentication.csproj",
+  "projectFilePath": "D:\\fullStackProjects\\jwtAuth\\JWTAuthentication\\JWTAuthentication\\JWTAuthentication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\neele\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\neele\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.20\\microsoft.aspnetcore.authentication.jwtbearer.6.0.20.nupkg.sha512",
