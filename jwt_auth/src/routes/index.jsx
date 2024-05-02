@@ -5,6 +5,7 @@ import { Navbar } from "../components";
 import { useAuth } from "../provider/AuthProvider";
 
 const Routes = () => {
+  const { token } = useAuth();
   // Define public routes accessible to all users
   const routesForPublic = [
     {
@@ -49,19 +50,25 @@ const Routes = () => {
   // Define routes accessible only to non-authenticated users
   const routesForNotAuthenticatedOnly = [
     {
-      path: "/register",
-      element: <Register />,
-    },
-    {
-      path: "/login",
-      element: <Login />,
+      path: "/",
+      element: <NavbarWrapper />,
+      children: [
+        {
+          path: "/register",
+          element: <Register />,
+        },
+        {
+          path: "/login",
+          element: <Login />,
+        },
+      ],
     },
   ];
 
   // Combine and conditionally include routes based on authentication status
   const router = createBrowserRouter([
     ...routesForPublic,
-    // ...(!token ? routesForNotAuthenticatedOnly : []),
+    ...(!token ? routesForNotAuthenticatedOnly : []),
     ...routesForAuthenticatedOnly,
   ]);
 

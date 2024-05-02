@@ -2,11 +2,14 @@ import logo from "./logo.svg";
 import "./App.css";
 import { Navbar } from "./components";
 import Routes from "./routes";
+import AuthProvider from "./provider/AuthProvider";
 
 function App() {
   return (
     <div>
-      <Routes />
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
     </div>
   );
 }
