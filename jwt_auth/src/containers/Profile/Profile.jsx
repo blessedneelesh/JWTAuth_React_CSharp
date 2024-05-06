@@ -5,10 +5,11 @@ import { Spinner } from "../../components";
 const Profile = () => {
   const { getUserProfile } = useAuth();
 
-  const [userProfile, setUserProfile] = useState();
+  const [userProfile, setUserProfile] = useState("");
   const [token, setToken] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
+  console.log(userProfile, "AHHAHA");
   const getCurrentUser = async () => {
     setIsLoading(true);
     var data = await getUserProfile();
@@ -23,40 +24,38 @@ const Profile = () => {
   }, []);
   return (
     <>
-      {isLoading ? (
+      {!userProfile ? (
         <Spinner />
       ) : (
-        userProfile && (
-          <div style={{ padding: "1rem" }}>
-            <Card
-              type="inner"
-              title={
-                `Hi, ` +
+        <div style={{ padding: "1rem" }}>
+          <Card
+            type="inner"
+            title={
+              `Hi, ` +
+              userProfile.userName.charAt(0).toUpperCase() +
+              userProfile.userName.slice(1)
+            }
+          >
+            <p style={{ overflowWrap: "break-word" }}>
+              <b>Token: </b>
+              {token}
+            </p>
+            <p>
+              <b>User Id: </b>
+              {userProfile.id}
+            </p>
+            <p>
+              <b>User Name: </b>
+              {userProfile &&
                 userProfile.userName.charAt(0).toUpperCase() +
-                userProfile.userName.slice(1)
-              }
-            >
-              <p style={{ overflowWrap: "break-word" }}>
-                <b>Token: </b>
-                {token}
-              </p>
-              <p>
-                <b>User Id: </b>
-                {userProfile.id}
-              </p>
-              <p>
-                <b>User Name: </b>
-                {userProfile &&
-                  userProfile.userName.charAt(0).toUpperCase() +
-                    userProfile.userName.slice(1)}
-              </p>
-              <p>
-                <b>Email: </b>
-                {userProfile.email}
-              </p>
-            </Card>
-          </div>
-        )
+                  userProfile.userName.slice(1)}
+            </p>
+            <p>
+              <b>Email: </b>
+              {userProfile.email}
+            </p>
+          </Card>
+        </div>
       )}
     </>
   );
