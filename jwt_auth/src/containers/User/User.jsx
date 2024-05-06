@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { Space, Table, Button, message } from "antd";
 import { useAuth } from "../../provider/AuthProvider";
 import { Spinner } from "../../components";
@@ -15,6 +15,8 @@ const User = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const [isPageLoading, setIsPageLoading] = useState(false);
+
+  const navigate = useNavigate();
 
   const enterLoading = (index, type) => {
     if (type == 1) {
@@ -64,7 +66,7 @@ const User = () => {
     console.log("resett");
     setSeed(!seed);
   };
-  console.log(users, "user");
+
   const {
     register,
     getAllUsers,
@@ -91,8 +93,14 @@ const User = () => {
     enterLoading(id, type);
     console.log(id);
     var res = await deleteUser(id);
-    reset();
-    message.success("Successfully Deleted!");
+    console.log(res, "aaa");
+    if (res.status == 403) {
+      navigate("/access-denied");
+    } else if (res.status == 201) {
+      reset();
+      message.success("Successfully Deleted!");
+    }
+
     exitLoading(id, type);
   };
 

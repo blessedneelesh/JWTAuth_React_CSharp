@@ -46,8 +46,9 @@ const Profile = () => {
               </p>
               <p>
                 <b>User Name: </b>
-                {userProfile.userName.charAt(0).toUpperCase() +
-                  userProfile.userName.slice(1)}
+                {userProfile &&
+                  userProfile.userName.charAt(0).toUpperCase() +
+                    userProfile.userName.slice(1)}
               </p>
               <p>
                 <b>Email: </b>
