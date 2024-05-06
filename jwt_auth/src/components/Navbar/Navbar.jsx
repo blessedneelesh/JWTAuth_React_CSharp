@@ -57,7 +57,7 @@ const Navbar = () => {
               )} */}
             </Menu.Item>
             <Menu.Item key="logout">
-              <Link to="/logout">Logout</Link>
+              <Link onClick={() => Logout()}>Logout</Link>
             </Menu.Item>
           </>
         ) : (

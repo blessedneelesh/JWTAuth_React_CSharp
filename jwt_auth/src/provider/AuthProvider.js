@@ -21,13 +21,19 @@ const AuthProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    //const jwtPayload = JSON.parse(window.atob(token.split(".")[1]));
-    //const isExpired = Date.now() >= jwtPayload.exp * 1000;
-    // if (token && !isExpired) {
-    if (token) {
+    //if (token && !isExpired) {
+
+    if (token && token !== "") {
       axios.defaults.headers.common["Authorization"] = "Bearer " + token;
       localStorage.setItem("token", token);
       localStorage.setItem("roles", roles);
+      const jwtPayload = JSON.parse(window.atob(token.split(".")[1]));
+      const isExpired = Date.now() >= jwtPayload.exp * 1000;
+      if (isExpired) {
+        delete axios.defaults.headers.common["Authorization"];
+        localStorage.removeItem("token");
+        localStorage.removeItem("roles");
+      }
     } else {
       delete axios.defaults.headers.common["Authorization"];
       localStorage.removeItem("token");
@@ -100,7 +106,11 @@ const AuthProvider = ({ children }) => {
   // };
 
   const getAllUsers = () => {
-    return axios.get(API_URL + "User/getUsers").then((res) => res.data);
+    return axios
+      .get(API_URL + "User/getUsers", {
+        headers: { Authorization: "Bearer " + token },
+      })
+      .then((res) => res.data);
   };
 
   const deleteUser = (id) => {
@@ -119,7 +129,11 @@ const AuthProvider = ({ children }) => {
   };
 
   const getRolesList = () => {
-    var res = axios.get(API_URL + "User/GetAllRoles");
+    var res = axios.get(API_URL + "User/GetAllRoles", {
+      headers: {
+        Authorization: "Bearer " + token,
+      },
+    });
     return res;
   };
 
