@@ -8,6 +8,9 @@ import "./Login.css";
 const Login = () => {
   const { login } = useAuth();
 
+  const [isBtnDisabled, setIsBtnDisabled] = useState(false);
+  const [isBtnLoading, setIsBtnLoading] = useState(false);
+
   let navigate = useNavigate();
 
   const [messageApi, contextHolder] = message.useMessage();
@@ -20,14 +23,18 @@ const Login = () => {
   };
   const onFinish = async (values) => {
     console.log("Success:", values);
+    setIsBtnDisabled(true);
+    setIsBtnLoading(true);
     var aa = await login(values.username, values.password);
+
     if (aa.token) {
-      navigate("/profile");
+      navigate("/");
       // window.location.reload();
     } else {
       openErrorMessage();
     }
-
+    setIsBtnDisabled(false);
+    setIsBtnLoading(false);
     console.log(aa, "tk");
   };
   const onFinishFailed = (errorInfo) => {
@@ -83,7 +90,11 @@ const Login = () => {
               <Form.Item>
                 <div className="formFooter">
                   <div className="one">
-                    <Button type="primary" htmlType="submit">
+                    <Button
+                      type="primary"
+                      htmlType="submit"
+                      loading={isBtnLoading}
+                    >
                       Submit
                     </Button>
                   </div>

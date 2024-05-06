@@ -24,9 +24,11 @@ builder.Services.AddDbContext<UserContext>(options =>
     }));
 
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => {
-    options.Password.RequiredLength = 6;
-    options.Password.RequireNonAlphanumeric = false;
-    options.Password.RequireDigit = false;
+    options.Password.RequireLowercase = true;
+    options.Password.RequireUppercase = true;
+    options.Password.RequireDigit = true;
+    options.Password.RequireNonAlphanumeric = true;
+    options.Password.RequiredLength = 8;
 }).AddEntityFrameworkStores<UserContext>() //added addRoles by neelesh
  .AddDefaultTokenProviders();
 

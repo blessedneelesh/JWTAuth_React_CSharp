@@ -1,5 +1,9 @@
 const Profile = () => {
-  return <>This is profile</>;
+  return (
+    <>
+      <div style={{ padding: "1rem" }}>asdf</div>
+    </>
+  );
 };
 
 export default Profile;
