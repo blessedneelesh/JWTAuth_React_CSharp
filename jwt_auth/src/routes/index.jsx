@@ -7,22 +7,13 @@ import { useAuth } from "../provider/AuthProvider";
 const Routes = () => {
   const { token } = useAuth();
   // Define public routes accessible to all users
-  const routesForPublic = [
-    {
-      path: "/",
-      element: <NavbarWrapper />,
-      children: [
-        {
-          path: "/",
-          element: <Profile />,
-        },
-        {
-          path: "/users",
-          element: <User />,
-        },
-      ],
-    },
-  ];
+  // const routesForPublic = [
+  //   {
+  //     path: "/",
+  //     element: <NavbarWrapper />,
+  //     children: [],
+  //   },
+  // ];
 
   // Define routes accessible only to authenticated users
   const routesForAuthenticatedOnly = [
@@ -32,7 +23,11 @@ const Routes = () => {
       // Wrap the component in ProtectedRoute
       children: [
         {
-          path: "/profile",
+          path: "/users",
+          element: <User />,
+        },
+        {
+          path: "/",
           element: <Profile />,
         },
         {
@@ -40,8 +35,12 @@ const Routes = () => {
           element: <AccessDenied />,
         },
         {
+          path: "/register",
+          element: <Register />,
+        },
+        {
           path: "/logout",
-          element: <div>logout</div>,
+          element: <div></div>,
         },
       ],
     },
@@ -53,6 +52,10 @@ const Routes = () => {
       path: "/",
       element: <NavbarWrapper />,
       children: [
+        {
+          path: "/",
+          element: <Login />,
+        },
         {
           path: "/register",
           element: <Register />,
@@ -67,7 +70,7 @@ const Routes = () => {
 
   // Combine and conditionally include routes based on authentication status
   const router = createBrowserRouter([
-    ...routesForPublic,
+    // ...routesForPublic,
     ...(!token ? routesForNotAuthenticatedOnly : []),
     ...routesForAuthenticatedOnly,
   ]);

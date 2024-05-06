@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Form, Input, message } from "antd";
 
 import { Link, Navigate } from "react-router-dom";
@@ -6,18 +6,20 @@ import { useAuth } from "../../provider/AuthProvider";
 import "./Register.css";
 const Register = () => {
   const { register, token } = useAuth();
-
+  const [isLoading, setIsLoading] = useState(false);
   const [form] = Form.useForm();
 
   const onFinish = async (values) => {
     console.log("Success:", values);
+    setIsLoading(true);
     const res = await register(values.username, values.email, values.password);
     console.log(res, "res");
     form.resetFields();
     message.success("User Successfully Created");
-    if (token) {
-      return <Navigate to="/admin" />;
-    }
+    setIsLoading(false);
+    // if (token) {
+    //   return <Navigate to="/admin" />;
+    // }
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
@@ -26,10 +28,10 @@ const Register = () => {
   const validatePassword = (rule, value, callback) => {
     console.log(value, "password");
     const passwordRegex =
-      /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[a-zA-Z!#$%&? "])[a-zA-Z0-9!#$%&?]{5,20}$/;
+      /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!#@$%&?])(?=.*[a-zA-Z!#@$%&? "])[a-zA-Z0-9!#@$%&?]{7,20}$/;
     if (!passwordRegex.test(value)) {
       callback(
-        "Should contain atleast 1 uppercase, lowercase, number and atleast 6 character long!"
+        "Should contain atleast 1 uppercase, 1 lowercase, 1 number, 1 symbol (!@#$%^&*) and atleast 8 character long!"
       );
     } else {
       callback();
@@ -99,7 +101,11 @@ const Register = () => {
               <Form.Item>
                 <div className="formFooter">
                   <div className="one">
-                    <Button type="primary" htmlType="submit">
+                    <Button
+                      type="primary"
+                      htmlType="submit"
+                      loading={isLoading}
+                    >
                       Submit
                     </Button>
                   </div>

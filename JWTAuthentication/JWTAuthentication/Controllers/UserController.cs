@@ -9,7 +9,7 @@ namespace JWTAuthentication.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    [Authorize(Roles ="Admin")]
+    [Authorize]
     public class UserController : ControllerBase
     {
         UserManager<IdentityUser> userManager;
@@ -20,7 +20,7 @@ namespace JWTAuthentication.Controllers
         }
 
         [HttpGet]
-        [AllowAnonymous]
+        //[AllowAnonymous]
         public async Task<List<UserRoleDto>> getUsers()
         {
             List<UserRoleDto> userRole = new List<UserRoleDto>();
@@ -39,6 +39,7 @@ namespace JWTAuthentication.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles="Admin")]
         public async Task<IdentityResult> Delete(string id)
         {
             IdentityUser user = await userManager.FindByIdAsync(id);
@@ -54,7 +55,7 @@ namespace JWTAuthentication.Controllers
         }
 
         [HttpPost]
-        [AllowAnonymous]
+        //[AllowAnonymous]
         public async Task<IdentityResult> AddToAdmin(string id)
         {
             IdentityRole adminRole = await roleManager.FindByNameAsync("Admin");
