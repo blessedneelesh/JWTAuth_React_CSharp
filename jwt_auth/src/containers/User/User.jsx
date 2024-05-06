@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { Space, Table, Button, message } from "antd";
 import { useAuth } from "../../provider/AuthProvider";
+import { Spinner } from "../../components";
 
 const User = () => {
   const [users, setUsers] = useState("");
@@ -12,6 +13,10 @@ const User = () => {
   const [isAddToAdminLoading, setIsAddToAdminLoading] = useState([]);
 
   const [isLoading, setIsLoading] = useState(false);
+
+  const [isPageLoading, setIsPageLoading] = useState(false);
+
+  const navigate = useNavigate();
 
   const enterLoading = (index, type) => {
     if (type == 1) {
@@ -61,7 +66,7 @@ const User = () => {
     console.log("resett");
     setSeed(!seed);
   };
-  console.log(users, "user");
+
   const {
     register,
     getAllUsers,
@@ -74,8 +79,10 @@ const User = () => {
   } = useAuth();
 
   const getUsers = async () => {
+    setIsPageLoading(true);
     var res = await getAllUsers();
     setUsers(res);
+    setIsPageLoading(false);
   };
 
   const onAddUser = async () => {
@@ -86,8 +93,14 @@ const User = () => {
     enterLoading(id, type);
     console.log(id);
     var res = await deleteUser(id);
-    reset();
-    message.success("Successfully Deleted!");
+    console.log(res, "aaa");
+    if (res.status == 403) {
+      navigate("/access-denied");
+    } else if (res.status == 201) {
+      reset();
+      message.success("Successfully Deleted!");
+    }
+
     exitLoading(id, type);
   };
 
@@ -110,8 +123,10 @@ const User = () => {
   };
 
   const getAllRoles = async () => {
+    setIsPageLoading(true);
     var res = await getRolesList();
     setRoles(res.data);
+    setIsPageLoading(false);
   };
 
   const onDeleteRole = async (userId) => {
@@ -224,11 +239,12 @@ const User = () => {
           columns={userColumns}
           dataSource={users}
           pagination={{ pageSize: 5 }}
+          loading={isPageLoading}
         />
         <br></br>
         <h3>Role Manager</h3>
         {roles.length === 0 ? (
-          <Button onClick={() => onAddRole()} loading={isLoading}>
+          <Button onClick={() => onAddRole()} loading={isPageLoading}>
             Add Admin Role
           </Button>
         ) : (
