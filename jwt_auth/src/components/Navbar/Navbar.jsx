@@ -25,7 +25,7 @@ const Navbar = () => {
 
   const Logout = () => {
     logout();
-    navigate("/profile");
+    //navigate("/");
     window.location.reload();
   };
 

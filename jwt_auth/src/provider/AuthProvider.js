@@ -113,9 +113,31 @@ const AuthProvider = ({ children }) => {
       .then((res) => res.data);
   };
 
-  const deleteUser = (id) => {
-    var res = axios.post(API_URL + "User/Delete?id=" + id);
-    return res;
+  const deleteUser = async (id) => {
+    return await axios
+      .post(API_URL + "User/Delete?id=" + id, {
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+      })
+      .then((res) => {
+        if (res.data) {
+          return { status: "201" };
+        }
+      })
+      .catch((error) => {
+        if (error.response) {
+          console.log(error.response.data);
+          console.log(error.response.status);
+          console.log(error.response.headers);
+          return "Username and Password doesn't match!";
+        } else {
+          console.log("Error", error.message);
+          return { status: "403" };
+        }
+      });
+
+    //return res;
   };
 
   const addToAdmin = async (id) => {
