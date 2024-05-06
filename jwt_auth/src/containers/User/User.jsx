@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Space, Table, Button, message } from "antd";
 import { useAuth } from "../../provider/AuthProvider";
+import { Spinner } from "../../components";
 
 const User = () => {
   const [users, setUsers] = useState("");
@@ -12,6 +13,8 @@ const User = () => {
   const [isAddToAdminLoading, setIsAddToAdminLoading] = useState([]);
 
   const [isLoading, setIsLoading] = useState(false);
+
+  const [isPageLoading, setIsPageLoading] = useState(false);
 
   const enterLoading = (index, type) => {
     if (type == 1) {
@@ -74,8 +77,10 @@ const User = () => {
   } = useAuth();
 
   const getUsers = async () => {
+    setIsPageLoading(true);
     var res = await getAllUsers();
     setUsers(res);
+    setIsPageLoading(false);
   };
 
   const onAddUser = async () => {
@@ -110,8 +115,10 @@ const User = () => {
   };
 
   const getAllRoles = async () => {
+    setIsPageLoading(true);
     var res = await getRolesList();
     setRoles(res.data);
+    setIsPageLoading(false);
   };
 
   const onDeleteRole = async (userId) => {
@@ -224,11 +231,12 @@ const User = () => {
           columns={userColumns}
           dataSource={users}
           pagination={{ pageSize: 5 }}
+          loading={isPageLoading}
         />
         <br></br>
         <h3>Role Manager</h3>
         {roles.length === 0 ? (
-          <Button onClick={() => onAddRole()} loading={isLoading}>
+          <Button onClick={() => onAddRole()} loading={isPageLoading}>
             Add Admin Role
           </Button>
         ) : (
