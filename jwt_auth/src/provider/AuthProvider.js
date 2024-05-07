@@ -2,8 +2,9 @@ import axios from "axios";
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 
 const AuthContext = createContext();
-
-const API_URL = "https://localhost:7051/api/";
+//const API_URL = "https://localhost:7051/api/";
+const API_URL =
+  "https://jwtauthentication20240506231107.azurewebsites.net/api/";
 
 const AuthProvider = ({ children }) => {
   // State to hold the authentication token

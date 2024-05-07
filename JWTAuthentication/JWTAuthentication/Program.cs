@@ -17,7 +17,7 @@ builder.Services.AddSwaggerGen();
 
 
 builder.Services.AddDbContext<UserContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("UserContext"),
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
     sqlServerOptionsAction: sqlOptions => // by neelesh transient failure because of no db.
     {
         sqlOptions.EnableRetryOnFailure();
