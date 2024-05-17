@@ -29,13 +29,12 @@ const Login = () => {
 
     if (aa.token) {
       navigate("/");
-      // window.location.reload();
+      //window.location.reload();
     } else {
       openErrorMessage();
     }
     setIsBtnDisabled(false);
     setIsBtnLoading(false);
-    console.log(aa, "tk");
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);

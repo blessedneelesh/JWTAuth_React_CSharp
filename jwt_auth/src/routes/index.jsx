@@ -1,7 +1,7 @@
 import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
 import { AccessDenied, Login, Register, User, Profile } from "../containers";
 import { ProtectedRoute } from "./ProtectedRoute";
-import { Navbar } from "../components";
+import { Navbar, Spinner } from "../components";
 import { useAuth } from "../provider/AuthProvider";
 
 const Routes = () => {
@@ -23,12 +23,16 @@ const Routes = () => {
       // Wrap the component in ProtectedRoute
       children: [
         {
-          path: "/users",
-          element: <User />,
-        },
-        {
           path: "/",
           element: <Profile />,
+        },
+        {
+          path: "/home",
+          element: <Profile />,
+        },
+        {
+          path: "/users",
+          element: <User />,
         },
         {
           path: "/access-denied",
@@ -40,7 +44,11 @@ const Routes = () => {
         },
         {
           path: "/logout",
-          element: <div></div>,
+          element: (
+            <div>
+              <Spinner></Spinner>
+            </div>
+          ),
         },
       ],
     },

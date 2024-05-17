@@ -63,7 +63,6 @@ const User = () => {
   };
 
   const reset = () => {
-    console.log("resett");
     setSeed(!seed);
   };
 
@@ -91,9 +90,7 @@ const User = () => {
 
   const onUserDelete = async (id, type) => {
     enterLoading(id, type);
-    console.log(id);
     var res = await deleteUser(id);
-    console.log(res, "aaa");
     if (res.status == 403) {
       navigate("/access-denied");
     } else if (res.status == 201) {
@@ -106,7 +103,6 @@ const User = () => {
 
   const onAddToAdmin = async (id, type) => {
     enterLoading(id, type);
-    console.log(id);
     var res = await addToAdmin(id);
     reset();
     message.success("Successfully added!");
@@ -115,7 +111,6 @@ const User = () => {
 
   const onRemoveFromAdmin = async (id, type) => {
     enterLoading(id, type);
-    console.log(id);
     var res = await removeFromAdmin(id);
     reset();
     message.success("Successfully removed!");
@@ -244,9 +239,7 @@ const User = () => {
         <br></br>
         <h3>Role Manager</h3>
         {roles.length === 0 ? (
-          <Button onClick={() => onAddRole()} loading={isPageLoading}>
-            Add Admin Role
-          </Button>
+          <Button onClick={() => onAddRole()}>Add Admin Role</Button>
         ) : (
           <Table size="small" columns={roleColumns} dataSource={roles} />
         )}

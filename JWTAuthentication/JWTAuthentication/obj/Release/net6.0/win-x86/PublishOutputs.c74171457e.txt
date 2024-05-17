@@ -2,6 +2,7 @@ D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\appsettings.Development.json
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\appsettings.json
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\appsettings.Production.json
+D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\efpt.config.json
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\JWTAuthentication.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\JWTAuthentication.runtimeconfig.json
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\JWTAuthentication.pdb
@@ -186,6 +187,8 @@ D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.AspNetCore.Connections.Abstractions.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.AspNetCore.CookiePolicy.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.AspNetCore.Cors.dll
+D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.AspNetCore.DataProtection.Abstractions.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.AspNetCore.DataProtection.Extensions.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.AspNetCore.DataProtection.dll
@@ -274,6 +277,8 @@ D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.Extensions.Hosting.Abstractions.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.Extensions.Hosting.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.Extensions.Http.dll
+D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.Extensions.Identity.Core.dll
+D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.Extensions.Identity.Stores.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.Extensions.Localization.Abstractions.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.Extensions.Localization.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.Extensions.Logging.Abstractions.dll
@@ -357,16 +362,12 @@ D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\ucrtbase.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\aspnetcorev2_inprocess.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.AspNetCore.Cryptography.Internal.dll
-D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.Data.SqlClient.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.EntityFrameworkCore.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.EntityFrameworkCore.Abstractions.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.EntityFrameworkCore.Relational.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.EntityFrameworkCore.SqlServer.dll
-D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.Extensions.Identity.Core.dll
-D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.Extensions.Identity.Stores.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.Identity.Client.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.IdentityModel.JsonWebTokens.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.IdentityModel.Logging.dll

@@ -410,3 +410,6 @@ D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\JWTAuthentication.genruntimeconfig.cache
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\ref\JWTAuthentication.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net6.0\win-x86\appsettings.Production.json
+D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net6.0\win-x86\efpt.config.json
+D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\JWTAuthentication.Properties.Resources.resources
+D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\win-x86\JWTAuthentication.csproj.GenerateResource.cache

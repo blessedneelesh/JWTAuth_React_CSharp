@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAANbaAI2SqIUWiXNLat9dnPQAAAAACAAAAAAAQZgAAAAEAACAAAAClrSrGH/lWkpzVAuAhyoKKuuJyDJxmUOhDnXb8ixoV/gAAAAAOgAAAAAIAACAAAADXIJCp6/8MiT6QVqKu7RkeQEWuBmtWIt0Zm1OkB5xOQIAAAADHoOzBZeCZBVb8Lj+RYeM0lChY3F31UbdFO9VsASjmsnX9Sqf7ck2QusA42mbNFf9wyReOSI895VqBmAUou7uq5603+2x7l2NWIrTCr/kyNuoCrWndM+7vcO0BS41Zha6dawdBD7n/aBCfHwa7T38NO+I2staQNza3gHeBbqFSk0AAAACnzHmHTqa+c7kGID39DQJhh6dDW2Q3xHoF2aKoqAyurey49AwqwaEnuvHjwfGjq/mdTdD5Ii+tx/u3CelVj2qJ</EncryptedPassword>
+    <History>True|2024-05-08T18:13:09.8702561Z;True|2024-05-08T14:08:33.3859680-04:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=tcp:jwtauthenticationdbserver.database.windows.net,1433%3bInitial Catalog=JWTAuthentication_db%3bUser Id=neelesh%40jwtauthenticationdbserver%3bPassword=Canada%402022</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

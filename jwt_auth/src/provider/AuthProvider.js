@@ -2,16 +2,15 @@ import axios from "axios";
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 
 const AuthContext = createContext();
-//const API_URL = "https://localhost:7051/api/";
+//const API_URL = "https://localhost:50452/api/";
 const API_URL =
-  "https://jwtauthentication20240506231107.azurewebsites.net/api/";
+  "https://jwtauthentication20240508135945.azurewebsites.net/api/";
 
 const AuthProvider = ({ children }) => {
   // State to hold the authentication token
   const [token, setToken_] = useState(localStorage.getItem("token"));
   const [roles, setRoles_] = useState(localStorage.getItem("roles"));
 
-  console.log(roles, "hahha", token);
   // Function to set the authentication token
   const setToken = (newToken) => {
     setToken_(newToken);
@@ -24,7 +23,7 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     //if (token && !isExpired) {
 
-    if (token && token !== "") {
+    if (token) {
       axios.defaults.headers.common["Authorization"] = "Bearer " + token;
       localStorage.setItem("token", token);
       localStorage.setItem("roles", roles);
@@ -34,6 +33,7 @@ const AuthProvider = ({ children }) => {
         delete axios.defaults.headers.common["Authorization"];
         localStorage.removeItem("token");
         localStorage.removeItem("roles");
+        window.location.reload();
       }
     } else {
       delete axios.defaults.headers.common["Authorization"];
@@ -43,7 +43,6 @@ const AuthProvider = ({ children }) => {
   }, [token, roles]);
 
   const register = (username, email, password) => {
-    console.log(username, email, password);
     return axios.post(API_URL + "Account/Register", {
       username,
       email,
@@ -52,7 +51,6 @@ const AuthProvider = ({ children }) => {
   };
 
   const login = (username, password) => {
-    console.log(username, password, "from login in auth");
     return axios
       .post(API_URL + "Account/Login", {
         username,
@@ -62,7 +60,6 @@ const AuthProvider = ({ children }) => {
         if (response.data.accessToken) {
           localStorage.setItem("token", JSON.stringify(response.data.token));
           localStorage.setItem("roles", JSON.stringify(response.data.roles));
-          console.log(JSON.stringify(response.data));
         }
         setToken(response.data.token);
         setRoles(response.data.roles);
@@ -91,14 +88,17 @@ const AuthProvider = ({ children }) => {
 
   const logout = () => {
     localStorage.removeItem("token");
+    window.location.reload();
   };
 
   const getUserProfile = async () => {
-    var response = await axios.get(API_URL + "Account/GetProfile");
-    console.log(response.data);
+    var response = await axios.get(API_URL + "Account/GetProfile", {
+      headers: { Authorization: "Bearer " + token },
+    });
+
     // if (response.data.id == null) {
     //   localStorage.removeItem("token");
-    // }
+    console.log(response.data, "response.data");
     return response.data;
   };
 

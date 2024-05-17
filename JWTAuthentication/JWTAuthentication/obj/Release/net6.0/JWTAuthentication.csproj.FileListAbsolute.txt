@@ -7,8 +7,6 @@ D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net6.0\JWTAuthentication.pdb
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net6.0\Humanizer.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net6.0\Microsoft.Data.SqlClient.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net6.0\Microsoft.EntityFrameworkCore.dll
@@ -16,10 +14,6 @@ D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Design.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net6.0\Microsoft.Extensions.Caching.Memory.dll
-D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net6.0\Microsoft.Extensions.DependencyInjection.dll
-D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net6.0\Microsoft.Extensions.Identity.Core.dll
-D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net6.0\Microsoft.Extensions.Identity.Stores.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net6.0\Microsoft.Identity.Client.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
@@ -32,7 +26,6 @@ D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net6.0\System.Configuration.ConfigurationManager.dll
-D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net6.0\System.Diagnostics.DiagnosticSource.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net6.0\System.Drawing.Common.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net6.0\System.Runtime.Caching.dll
@@ -73,3 +66,6 @@ D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\JWTAuthentication.genruntimeconfig.cache
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\ref\JWTAuthentication.dll
 D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net6.0\appsettings.Production.json
+D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\bin\Release\net6.0\efpt.config.json
+D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\JWTAuthentication.Properties.Resources.resources
+D:\fullStackProjects\jwtAuth\JWTAuthentication\JWTAuthentication\obj\Release\net6.0\JWTAuthentication.csproj.GenerateResource.cache

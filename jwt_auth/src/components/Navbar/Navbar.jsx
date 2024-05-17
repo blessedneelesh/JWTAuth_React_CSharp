@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Menu, Button } from "antd";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../provider/AuthProvider";
+import { Login } from "../../containers";
 
 const Navbar = () => {
-  const [current, setCurrent] = useState("/");
+  const [current, setCurrent] = useState("");
 
   const onClick = (e) => {
     console.log("click ", e);
@@ -13,32 +14,20 @@ const Navbar = () => {
 
   var { token, logout, getUserProfile } = useAuth();
 
-  const [userProfile, setUserProfile] = useState("");
-
   let navigate = useNavigate();
 
-  const getCurrentUser = async () => {
-    var data = await getUserProfile();
-    setUserProfile(data);
-    console.log(data);
-  };
+  const Logout = async () => {
+    await logout();
 
-  const Logout = () => {
-    logout();
-    //navigate("/");
-    window.location.reload();
+    //window.location.reload();
   };
-
-  useEffect(() => {
-    getCurrentUser();
-  }, []);
 
   return (
     <>
       <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal">
         <Menu.Item key="home">
           {" "}
-          <Link to="/">Home</Link>
+          <Link to="/home">Home</Link>
         </Menu.Item>
         <Menu.Item key="user">
           <Link to="/users">User</Link>
