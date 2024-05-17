@@ -1,0 +1,7 @@
+.register {
+  padding: 0rem 1rem;
+}
+.formFooter {
+  display: flex;
+  justify-content: space-between;
+}

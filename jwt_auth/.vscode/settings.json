@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/b1187231-1531-4531-b294-4973aa9defca/resourceGroups/jwtAuthentication/providers/Microsoft.Web/sites/jwtdemo",
+    "appService.deploySubpath": "build"
+}
